@@ -24,7 +24,7 @@ date(X,Y) :- startdate(X, Y).
 % 2. Go to supermarket 1 day before celebration (as cooking takes up all the time on celebration day)
 :- schedule(N, _, T), celebrate(L), task(M, T),  M == 2, N != L + 1.
 
-% 3. Go to bank before I supermarket
+% 3. Go to bank before going to the supermarket
 :- schedule(N1, _, T1), schedule(N2, _, T2), task(M1, T1), task(M2, T2), M1 == 2, M2 == 3, N1 > N2.
 
 
